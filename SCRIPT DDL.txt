@@ -1,0 +1,16 @@
+//II Trabalho Prático Banco de Dados
+
+CREATE TABLE Medico(
+	ID_Medico int NOT NULL CONSTRAINT PK_Medico PRIMARY KEY,
+	Nome nvarchar(30) NOT NULL,
+	Especialidade nvarchar(30) NOT NULL,
+	Cel nvarchar(14) NOT NULL,
+)
+
+CREATE TABLE Receita(
+	ID_Receita int NOT NULL,
+	ID_Medico int NOT NULL CONSTRAINT PK_Medico FOREIGN KEY,
+	Descricao nvarchar(500),
+	DatadaPrescricao date
+)
+
